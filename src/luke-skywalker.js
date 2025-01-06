@@ -1,8 +1,10 @@
 // Function to fetch and display Luke Skywalker
 const fetchLuke = async (element) => {
     const response = async () => {
-        const res = await fetch("https://www.swapi.tech/api/people/1");
-        const data = await res.json();
+        const res = await fetch("https://www.swapi.tech/api/people/1")
+        .then(res => res.json());
+        // .then(data => data);
+        const data = await res;
         return data;
     };
 
