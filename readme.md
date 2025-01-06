@@ -1,24 +1,24 @@
 # Hero
-This project is for admission consideration into [Code the Dream](https://codethedream.org/). This project is intended to meet certain criteria and be fun. I that regard, there is one thing of note. In creating the concept I used a YouTube video from the bad lip reading channel. It is a funny music video regarding the attack of the rebel base on Hoth. Please be advised that there is a video in the project. It does help cement the concept, but is not required to meet the project criteria. I do not consider it vulgar or offensive, however, *any* video *may* be considered restrictive content for this project.
+This project is for admission consideration into [Code the Dream](https://codethedream.org/). This project is intended to meet certain criteria and be fun. I that regard, there is one thing of note. In creating the concept I used a YouTube video from the bad lip reading channel. It is a funny music video regarding the attack of the rebel base on Hoth. Please be advised that there is a video in the project. It does help cement the concept, but is not required to meet the project criteria. I do **not** consider it vulgar or offensive, however, I suspect *any* video *may* be considered restrictive content for this project.
 
 ## Project Criteria
 This project needs to do and accomplish the following:
 ### structure
-[x] Public Git repo that contains the project.
-[x] A HTML document for the page
-[x] A CSS document to style the HTML
-[x] A javascript file to retrieve data from the public api.
-[x] A readme file that includes instructions for running the web page.
+- [x] Public Git repo that contains the project.
+- [x] A HTML document for the page
+- [x] A CSS document to style the HTML
+- [x] A javascript file to retrieve data from the public api.
+- [x] A readme file that includes instructions for running the web page.
 ### Content
-[x] Display data for at least two of the endpoints of the api.
-[x] Include navigation for the api endpoints.
-[x] Issue new get requests for each api endpoint.
+- [x] Display data for at least two of the endpoints of the api.
+- [x] Include navigation for the api endpoints.
+- [x] Issue new get requests for each api endpoint.
 ### Functionality
-[x] Ensure trouble free running of site per instructions.
-[x] Ensure api calls are clean and light.
-[x] Write clean and readable code.
-[x] Handle error cases.
-[x] Be mindful or considered about style.
+- [x] Ensure trouble free running of site per instructions.
+- [x] Ensure api calls are clean and light.
+- [x] Write clean and readable code.
+- [x] Handle error cases.
+- [x] Be mindful or considered about style.
 
 ## Concept - Intercepted Transmission
 One of our deep space satellites has received a rogue transmission. It was grainy and a digital mess, but with the help of AI it is being pieced together. The transmission seems to come from a galaxy far far away and was picked up by SWAPI as it rounded io, as it was in the dark, in orbit of Jupiter.
@@ -65,5 +65,7 @@ Each call, except planets, is it's own separate javascript file. The planet js m
 * Layout of site could be greatly improved. Maybe navigation down the left side to display page data on the right. Maybe a more military style font. Better consider light and dark mode.
 * Consolidate api calls and data display into one file. Most of the code in each file is identical.
 * Consider and implement SEO.
+* Testing should be implemented.
+* All of the above improvements suggest using a framework.
 
 The project is live on Netlify and can be reached via [this link](https://fastidious-cuchufli-e25756.netlify.app/)
