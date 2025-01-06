@@ -1,5 +1,5 @@
 # Hero
-This project is for admission consideration into [Code the Dream](https://codethedream.org/). Here is the concept.
+This project is for admission consideration into [Code the Dream](https://codethedream.org/). This project is intended to meet certain criteria and be fun. I that regard, there is one thing of note. In creating the concept I used a YouTube video from the bad lip reading channel. It is a funny music video regarding the attack of the rebel base on Hoth. Please be advised that there is a video in the project. It does help cement the concept, but is not required to meet the project criteria. I do not consider it vulgar or offensive, however, *any* video *may* be considered restrictive content for this project. Here is the concept.
 
 ## Intercepted Transmission
 One of our deep space satellites has received a rogue transmission. It was grainy and a digital mess, but with the help of AI it is being pieced together. The transmission seems to come from a galaxy far far away and was picked up by star gazer as it rounded io, as it was in the dark, in orbit of Jupiter.
