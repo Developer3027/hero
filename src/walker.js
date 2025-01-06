@@ -1,19 +1,29 @@
 // Function to fetch and display the AtAt Walker
 const fetchWalker = async (element) => {
+  /**
+   * Async function to fetch and parse the response from
+   * https://www.swapi.tech/api/vehicles/18. The response is expected
+   * to be in JSON format and contain the properties for the AtAt Walker.
+   * @function
+   * @returns {Promise<Object>} - The parsed response data
+   */
   const response = async () => {
       const res = await fetch("https://www.swapi.tech/api/vehicles/18");
       const data = await res.json();
+      console.log("Calling swapi api for Walker");
       return data;
   };
 
+  // Try to fetch the Walker
   try {
-      const walkerData = await response();
+    // Fetch the Walker before click event of button  
+    // const walkerData = await response();
       
       // Set up the click event listener on the button
       element.addEventListener('click', async () => {
           const currentWalkerData = await response(); // Fetch Walker
 
-          // Extract properties
+          // Extract wanted properties from the object
           const { name, crew, passengers, length, vehicle_class, max_atmosphering_speed } = currentWalkerData.result.properties;
           const lengthInFeet = Math.round(length * 3.281); // Convert meters to feet
           
@@ -41,9 +51,10 @@ const fetchWalker = async (element) => {
           // Disable the button after fetching the data
           element.disabled = true;
       });
+  // If there is an error
   } catch (error) {
       console.error('Error grabbing Walker:', error);
-      document.getElementById('Walker').innerText = "Finally scrapped this concept.";
+      document.getElementById('Walker').innerText = "Finally scrapped this walking tank concept.";
   }
 };
 

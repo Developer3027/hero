@@ -21,7 +21,7 @@ This project needs to do and accomplish the following:
 [x] Be mindful or considered about style.
 
 ## Concept - Intercepted Transmission
-One of our deep space satellites has received a rogue transmission. It was grainy and a digital mess, but with the help of AI it is being pieced together. The transmission seems to come from a galaxy far far away and was picked up by star gazer as it rounded io, as it was in the dark, in orbit of Jupiter.
+One of our deep space satellites has received a rogue transmission. It was grainy and a digital mess, but with the help of AI it is being pieced together. The transmission seems to come from a galaxy far far away and was picked up by SWAPI as it rounded io, as it was in the dark, in orbit of Jupiter.
 
 From what we can gather, an alien species that looks very similar to humans are engaged in conflict. This transmission seems to focus on one particular pilot who likes to rap when engaging the enemy.
 
@@ -34,7 +34,12 @@ I am running Node V18.18.2 with NPM V9.8.1. Site was set up with Vite@latest.
 
 To run locally, fork then clone the repo. Run npm install from the root folder to ensure all packages are installed. This uses default Vite and is very lightweight. Run 
 ```npm run dev```
-to start the Vite dev environment. The SWAPI api being used is free and open source. No auth required.
+to start the Vite dev environment. The SWAPI and Weather api's being used are free and open source. No auth required. Each api call is logged in console to note the call was made. Console logs do not return object data and so were left active for this project. Code to make api calls before button clicks is left in place but not used for this project. For Character and Vehicle the response is fine but the Planets call is slow and may want to implement pre-call to weather api.
+
+#### APIs Used
+[Star Wars API](https://www.swapi.tech/documentation)
+
+[Weather API](https://open-meteo.com/en/docs)
 
 This is built as a SPA (Single Page Application) in concept. There are buttons to make api calls and populate further information.
 
@@ -50,7 +55,15 @@ This is built as a SPA (Single Page Application) in concept. There are buttons t
   * Calculated conversion for length in feet.
   * Mobile responsive.
 * There is one call to the planets/4
+  * Calculated conversion from c to f
+  * Fetch weather data for coldest spot on earth
+  * Show current temp for coldest spot on earth
 
-Each call is it's own separate javascript file.
+Each call, except planets, is it's own separate javascript file. The planet js makes two api calls from separate api's. One for planet data and one for weather data.
+
+### Probable improvements
+* Layout of site could be greatly improved. Maybe navigation down the left side to display page data on the right. Maybe a more military style font. Better consider light and dark mode.
+* Consolidate api calls and data display into one file. Most of the code in each file is identical.
+* Consider and implement SEO.
 
 The project is live on Netlify and can be reached via [this link](https://fastidious-cuchufli-e25756.netlify.app/)

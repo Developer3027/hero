@@ -1,21 +1,29 @@
 // Function to fetch and display Luke Skywalker
+// Called by button so pass in element
 const fetchLuke = async (element) => {
+    /**
+     * Async function to fetch and parse the response from
+     * https://www.swapi.tech/api/people/1. The response is expected
+     * to be in JSON format and contain the properties for Luke Skywalker.
+     * @function
+     * @returns {Promise<Object>} - The parsed response data
+     */
     const response = async () => {
-        const res = await fetch("https://www.swapi.tech/api/people/1")
-        .then(res => res.json());
-        // .then(data => data);
-        const data = await res;
+        const res = await fetch("https://www.swapi.tech/api/people/1");
+        const data = await res.json();
+        console.log("Calling swapi api for Luke Skywalker");
         return data;
     };
-
+    // Try to fetch Luke Skywalker
     try {
-        const LukeData = await response();
+        // Fetch Luke Skywalker before click event of button
+        // const LukeData = await response();
         
         // Set up the click event listener on the button
         element.addEventListener('click', async () => {
-            const currentLukeData = await response(); // Fetch Luke Skywalker
+            const currentLukeData = await response(); // Fetch Luke Skywalker object
 
-            // Extract properties
+            // Extract wanted properties from object
             const { name, height, mass } = currentLukeData.result.properties;
             const heightToInches = height / 2.54; // Convert height to inches
             const heightInFeet = Math.round(heightToInches / 12 * 10) / 10; // Convert height to feet with one decimal point
@@ -42,13 +50,15 @@ const fetchLuke = async (element) => {
             document.getElementById("Luke").innerHTML = content;
 
             // Disable the button after fetching the data
+            // Prevent multiple api calls
             element.disabled = true;
         });
+    // Catch any errors of api call.
     } catch (error) {
         console.error('Error grabbing Luke:', error);
         document.getElementById('Luke').innerText = 'Luke may have lost his hand.';
     }
 };
 
-// Export the function
+// Export the function as default
 export default fetchLuke;

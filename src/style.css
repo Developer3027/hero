@@ -44,6 +44,10 @@ h2 {
   line-height: normal;
 }
 
+span {
+  color: yellowgreen;
+}
+
 .normal-text, p {
   font-size: 1em;
   font-weight: 400;

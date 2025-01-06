@@ -1,6 +1,7 @@
 import './style.css'
 import fetchLuke from './luke-skywalker.js';
 import fetchWalker from './walker.js';
+import fetchPlanet from './hoth.js';
 
 
 
@@ -10,10 +11,16 @@ document.querySelector('#app').innerHTML = `
   <div>
     <h1 class="top-secret">! Top Secret !</h1>
     <p>
-      On December 19th, 2022, at 08:00:00 est, the deep space satellite SWAPI, intercepted a transmission of unknown origin. Most of it was a digital mess but it seems that human like individuals are engaged in battle using equipment not currently available to any armed forces. Through the use of AI we were able to decrypt and clean a small part of the message. Although this may seem funny, it is not. It is our belief that this is the origin of the zombie outbreak, in a galaxy far, far away.
+      On December 19th, 2022, at 08:00:00 est, One of our deep space satellites has received a rogue transmission of unknown origin. It was grainy and a digital mess, but with the help of AI it is being pieced together. The transmission seems to come from a galaxy far far away and was picked up by SWAPI as it rounded io, as it was in the dark, in orbit of Jupiter.
     </p>
     <p>
-      Data is still being processed, but we believe the following happened a long, long time ago. Please do not be fooled by the advanced technology you will see in the clip. It is still unclear what exactly caused the zombie outbreak. This classified footage is the last few minutes of the battle.
+      From what we can gather, an alien species that looks very similar to humans are engaged in conflict. This transmission seems to focus on one particular pilot who likes to rap when engaging the enemy.
+    </p>
+    <p>
+      This may all be concerning on it own, but what got our attention is, this seems to be the first know footage of the zombie outbreak. As suspected, this virus originated a long long time ago. If confirmed, this could be real hope.
+    </p>
+    <p>
+      This file is <strong>top secret</strong> and need to know only. It contains the cleaned footage of the battle as well as the specs for the pilot, tech, and planet where the incident occurred. This information is still fluid but we have been able to piece some information together.
     </p>
     <hr>
     <h2 class="top-secret">Zombie video origin:</h2>
@@ -44,10 +51,23 @@ document.querySelector('#app').innerHTML = `
       </button>
       <p id="Walker"></p>
     </div>
+    <!-- Hoth Planet -->
+    <div>
+      <h2 class="caution">Planet: Hoth</h2>
+      <p>
+        From other data we have determined that the planet is called Hoth. This is a cold wasteland of a planet. Rugged terrain and a harsh climate make it a dangerous place to live. Click the button to review specific information.
+      </p>
+      <button id="fetch-planet" type="button">
+        Hoth file:
+      </button>
+      <p id="Hoth"></p>
+    </div>
   </div>
 `
 
 fetchLuke(document.querySelector('#fetch-luke'));
 
 fetchWalker(document.querySelector('#fetch-walker'));
+
+fetchPlanet(document.querySelector('#fetch-planet'));
 
