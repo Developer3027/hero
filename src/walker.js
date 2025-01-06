@@ -30,18 +30,20 @@ const fetchWalker = async (element) => {
           // Create the content to display
           const content = `
               <div class="card-wrapper">
-                  <img src="https://avatarfiles.alphacoders.com/107/thumb-1920-107665.jpg" style="width: 50%; border-radius: 5px;" alt="${name}" />
-                  <div class="card-content">
-                      <h3>${name}</h3>
-                      <p>This is one of the craziest things we have ever seen. A tank that walks around. 
-                      Out of all the technology we have ever seen, this is the craziest concept. 5 aliens 
-                      to run it, can carry 40. This classified footage is the last few minutes of the battle.</p>
-                      <p>class: ${vehicle_class}</p>
-                      <p>length: ${lengthInFeet} ft</p>
-                      <p>speed: ${max_atmosphering_speed} ?</p>
-                      <p>crew: ${crew}</p>
-                      <p>passengers: ${passengers}</p>
-                  </div>
+                <div>
+                  <img src="https://avatarfiles.alphacoders.com/107/thumb-1920-107665.jpg" style="width: 50%;border-radius: 5px;" alt="${name}" />
+                </div>
+                <div class="card-content">
+                    <h3>${name}</h3>
+                    <p>This is one of the craziest things we have ever seen. A tank that walks around. 
+                    Out of all the technology we have ever seen, this is the craziest concept. 5 aliens 
+                    to run it, can carry 40. This classified footage is the last few minutes of the battle.</p>
+                    <p>class: ${vehicle_class}</p>
+                    <p>length: ${lengthInFeet} ft</p>
+                    <p>speed: ${max_atmosphering_speed} ?</p>
+                    <p>crew: ${crew}</p>
+                    <p>passengers: ${passengers}</p>
+                </div>
               </div
           `;
 

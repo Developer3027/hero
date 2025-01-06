@@ -32,7 +32,9 @@ const fetchLuke = async (element) => {
             // Create the content to display
             const content = `
                 <div class="card-wrapper">
-                    <img src="https://media.gettyimages.com/id/1934832068/photo/a-new-hope.jpg?s=612x612&w=gi&k=20&c=8CBK7lbFyEtBm7tqfuP8cQmL3QvoOCEc1MJKnzIq-1k=" style="width: 50%; border-radius: 5px;" alt="${name}" />
+                    <div>
+                        <img src="https://media.gettyimages.com/id/1934832068/photo/a-new-hope.jpg?s=612x612&w=gi&k=20&c=8CBK7lbFyEtBm7tqfuP8cQmL3QvoOCEc1MJKnzIq-1k=" style="border-radius: 5px;" alt="${name}" />
+                    </div>
                     <div class="card-content">
                         <h3>${name}</h3>
                         <p>This young man was going places. He became a fighter pilot at a young age and loved 

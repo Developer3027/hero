@@ -50,7 +50,9 @@ const fetchPlanet = async (element) => {
           // Create the content to display
           const content = `
               <div class="card-wrapper">
-                  <img src="https://upload.wikimedia.org/wikipedia/en/d/d2/Hothplanetsurface.jpg" style="width: 50%; border-radius: 5px;" alt="${name}" />
+                  <div>
+                    <img src="https://upload.wikimedia.org/wikipedia/en/d/d2/Hothplanetsurface.jpg" style="border-radius: 5px;" alt="${name}" />
+                  </div>
                   <div class="card-content">
                       <h3>${name}</h3>
                       <span>Current Temperature: ${temperatureInFahrenheit} °F</span>
